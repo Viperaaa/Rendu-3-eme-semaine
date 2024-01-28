@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription pour le meilleur site le plus joli !!!</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <h1>Formulaire d'inscription pour le meilleur des sites des plus joli !!!</h1>
+    <form action="">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" name="username" id="username" placeholder="Nom d'utilisateur">
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" placeholder="Mot de passe">
+        <small id="passwordHelp" class="form-text text-muted">
+            Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un caractère spécial, et avoir une longueur minimale de 8 caractères.
+        </small>
+        <label for="gender">Genre :</label>
+        <select name="gender" id="gender">
+            <option value="male">Homme</option>
+            <option value="female">Femme</option>
+            <option value="other">Autre</option>
+        </select>
+
+        <input type="submit" class="button-input" value="Connexion">
+
+    </form>
+    
+    <button class="dark-mode-toggle">Activer le mode sombre</button>
+    
+    <script src="Form.js"></script>
+</body>
+</html>

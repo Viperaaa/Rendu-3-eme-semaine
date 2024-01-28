@@ -1,0 +1,130 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: 'comic sans ms', sans-serif;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Styles pour l'icône du menu burger */
+.burger-menu {
+    cursor: pointer;
+    display: none; /* Masqué par défaut sur les écrans plus larges */
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Stylisation pour un menu burger plus esthétique */
+.burger-menu:focus {
+    outline: none; /* Supprimer la bordure de focus par défaut */
+}
+
+.burger-menu:hover .bar {
+    background-color: #f1f1f1; /* Couleur au survol */
+}
+
+/* Styles pour le menu déroulant */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles pour le menu déroulant en mode mobile je me suis aidé de chatgpt pour cette partie*/
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* S'assurer que le menu est au-dessus du reste du contenu */
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /* Stylisation pour le menu burger en mode mobile */
+    .burger-menu {
+        display: block;
+        background-color: #333;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .burger-menu:focus {
+        outline: none;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* Styles spécifiques pour Swiper en mode mobile */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Masquer les boutons de navigation */
+    }
+}
